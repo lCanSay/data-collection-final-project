@@ -7,7 +7,6 @@ with DAG(
     start_date=datetime(2025, 1, 1),
     schedule="@hourly",
     catchup=False,
-    tags=["project"],
 ) as dag:
 
     run_cleaner = BashOperator(

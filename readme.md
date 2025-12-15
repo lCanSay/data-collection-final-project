@@ -53,6 +53,8 @@ Manual topic commands (if needed):
 ```
 docker compose exec kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --list
 docker compose exec kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --create --if-not-exists --topic raw_events --partitions 3 --replication-factor 1
+
+docker compose exec kafka bash -lc \'/opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --topic raw_events
 ```
 
 ## Stopping and cleaning up

@@ -3,6 +3,7 @@ services:
     image: apache/kafka:3.7.0
     volumes:
       - ./kafka-data:/var/lib/kafka/data
+      - ./kafka/server.properties:/opt/kafka/config/kraft/server.properties
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
