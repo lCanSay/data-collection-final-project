@@ -1,4 +1,4 @@
-# Project Demo: [Watch on YouTube](https://www.youtube.com/watch?v=YcC7G6XW2X0)
+# Project Demo: https://www.youtube.com/watch?v=YcC7G6XW2X0
 
 # Final Project – Airflow + Kafka (Docker Compose)
 
