@@ -29,7 +29,7 @@ def init_db(sqlite_path: str) -> None:
 
         raw_json TEXT NOT NULL,
 
-        UNIQUE(zone, datetime, signal),
+        UNIQUE(zone, datetime, signal)
       );
     """)
 
@@ -47,7 +47,7 @@ def init_db(sqlite_path: str) -> None:
 
         computed_at TEXT NOT NULL DEFAULT (CURRENT_TIMESTAMP),
 
-        UNIQUE(day, zone, signal),
+        UNIQUE(day, zone, signal)
       );
     """)
 

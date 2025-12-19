@@ -85,20 +85,20 @@ def main():
         ci = fetch(f"{BASE}/carbon-intensity/latest", {
             "zone": zone,
             "disableEstimations": "false",
-            "temporalGranularity": "hourly",
+            "temporalGranularity": "5_minutes", # can change to hourly
             "emissionFactorType": "lifecycle",
         })
         publish_if_new(zone, "carbon_intensity", ci)
 
         tl = fetch(f"{BASE}/total-load/latest", {
             "zone": zone,
-            "temporalGranularity": "hourly",
+            "temporalGranularity": "5_minutes",
         })
         publish_if_new(zone, "total_load", tl)
 
         pr = fetch(f"{BASE}/price-day-ahead/latest", {
             "zone": zone,
-            "temporalGranularity": "hourly",
+            "temporalGranularity": "5_minutes",
         })
         publish_if_new(zone, "price_day_ahead", pr)
 
